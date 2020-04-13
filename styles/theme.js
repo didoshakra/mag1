@@ -25,11 +25,13 @@ export const themeDark = {
     //
     // text: "#333",
 
-    text: "#fff", //білий
-    background: "rgba(65,69,69,1)", //чорний
+    // text: "#fff", //білий
+    text: "rgba(65,69,69,1)", //чорний
+    // background: "rgba(65,69,69,1)", //чорний
+    background: "#fff", //білий
 
     headBackground: "rgba(23,25,25,1)",
-    headText: "#fff", //білий// background1: "#000", //чорний
+    headText: "#fff", //білий
     headTextHover: "rgba(65,69,69,1)",
     headTextBackgroundHover: "#fff", //білий
     //headTextHover: "rgba(52,144,246,1)",
@@ -43,7 +45,8 @@ export const themeDark = {
     //headIconBorderStyle: "solid",
     headIconBorderStyle: "dotted",
 
-    headMenuBackground: "rgba(23,25,25,0.9)",
+    // headMenuBackground: "rgba(23,25,25,0.9)",
+    headMenuBackground: "#fff", //білий
     //headMenuBackgroundActive: "#f6d142",
     //headMenuBackgroundActive: "red",
     headMenuBackgroundActive: "#f64532",
@@ -78,21 +81,24 @@ export const themeLith = {
     //   success: "#d4edda",
 
     text: "#060214",
-    //background: "rgba(220,234,244,1)",
-    background: "rgb(223, 222, 222)", //Основа
+    background: "rgba(220,234,244,1)",
+    // background: "rgb(223, 222, 222)", //Основа
 
     headBackground: "rgba(21,103,179,1)",
+    // headBackground: "#fff", //білий
     headText: "#fff", //білий
+    // headText: "rgba(65,69,69,1)",
     headTextHover: "rgba(21,103,179,1)",
+    // headTextHover: "#fff", //білий/
     headTextBackgroundHover: "#fff", //білий
-    //headText: "#333", //чорний
-    //headTextHover: "#e47328",
-    //headTextBackgroundHover: "#0d8ecf",
-    //headTextBackgroundHover: "rgba(20,92,173,1)",
+    // headTextBackgroundHover: "rgba(65,69,69,1)",
 
     headIcon: "#fff", //білий
+    // headIcon: "rgba(23,25,25,1)",
     headIconHover: "rgba(21,103,179,1)",
+    // headIconHover: "#fff", //білий
     headIconBackgroundHover: "#fff", //білий
+    // headIconBackgroundHover: "rgba(23,25,25,1)",
     //headIconBorderWidht: "2px",
     headIconBorderWidht: "0px",
     //headIconBorderStyle: "solid",

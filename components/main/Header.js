@@ -1,7 +1,5 @@
 //Header.js
 import { useContext, useEffect } from "react";
-import Ra_HeaderLogo from "../ra_ui/HeaderLogo";
-import Mag_HeaderLogo from "../mag_stan/HeaderLogo";
 import HeaderLogo from "./HeaderLogo";
 import { ComponentContext } from "../../context/ComponentContext";
 import HeaderMenu from "./HeaderMenu";
@@ -12,7 +10,7 @@ var scrolUP = false;
 
 const Header = () => {
   const { state } = useContext(ComponentContext);
-  const { theme, app } = state;
+  const { theme } = state;
   const [headerOpen, setHeaderOpen] = React.useState(true); //*** щоб ховалась/появлялась Head при скролі
   // const drawerOnClick = () => {
   //   setDrawerOpen(!drawerOpen);
@@ -54,24 +52,12 @@ const Header = () => {
     };
   });
 
-  const headerLogo = () => {
-    switch (app) {
-      case "ra":
-        return <Ra_HeaderLogo />;
-      case "mag_stan":
-        return <Mag_HeaderLogo />;
-      default:
-        return <HeaderLogo />;
-    }
-  };
-
   return (
     <div className="header">
       {/* <Drawer drawerOpen={drawerOpen} drawerOnClick={drawerOnClick} />
       <DrawerButton drawerOpen={drawerOpen} drawerOnClick={drawerOnClick} /> */}
       <div className="header__wrapper">
-        {headerLogo()}
-        {/* <HeaderLogo /> */}
+        <HeaderLogo />
         <div className="header__wrapper__menu">
           {/* Навігація */}
           <HeaderMenu />

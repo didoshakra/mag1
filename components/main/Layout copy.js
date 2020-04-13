@@ -1,4 +1,5 @@
 //https://reacttricks.com/learn-react-by-building-websites-with-next/
+//До динамічного імпорту <Header />
 
 import { useContext } from "react";
 import Head from "next/head";

@@ -40,7 +40,8 @@ const initialState = {
   locale: "en",
   theme: themeLith,
   themeTypeLight: true,
-  app: "ra_ui",
+  // app: "ra_ui",
+  app: "mag_stan",
 };
 
 export const ComponentContext = createContext(initialState);

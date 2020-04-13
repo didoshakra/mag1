@@ -52,11 +52,9 @@ const Homepage = () => {
         .cover {
           position: relative;
           min-height: 600px;
-          // background: transparent url(/cover.jpg) no-repeat center center;
-          // background: transparent url(/sunrise-over-planet-earth-in.jpg) no-repeat
-          // background: transparent url(/Karpaty.jpg) no-repeat
-          // background: transparent url(/photo/bananu-alkogol.jpg) no-repeat
+
           background: transparent url(/photo/bananu-alkogol-obr.jpg) no-repeat
+            //background: transparent url("/template/images/bg_1.jpg") no-repeat
             center center;
           background-size: cover;
           word-wrap: break-word;

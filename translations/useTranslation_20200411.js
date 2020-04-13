@@ -1,10 +1,12 @@
-//fajka/https://medium.com/swlh/how-to-build-a-multilingual-website-in-next-js-2924eeb462bc
 //useTranslation.js
+//fajka/https://medium.com/swlh/how-to-build-a-multilingual-website-in-next-js-2924eeb462bc
+//До динамічного import dynamic from "next/dynamic"
+
 import { useContext } from "react";
 import { ComponentContext } from "../context/ComponentContext";
 import { defaultLocale } from "./config";
 // import translations from "./translations";
-import mapTranslations from "./mapTranslations";
+import mapTranslations from "./mapTranslations"; //Для вибору файлів мов
 
 export default function useTranslation() {
   // const { locale } = useContext(LocaleContext);
