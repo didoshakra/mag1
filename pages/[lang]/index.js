@@ -1,106 +1,168 @@
-//Homepage/hover
-import { useContext } from "react";
+//home_mui.js / Muiv4.5.1
+//Добавлено animat
+import React, { useContext } from "react";
 import Link from "next/link";
-import Layout from "../../components/main/Layout";
+import Head from "next/head";
+
+import Layout from "../../components/all/Layout";
 import useTranslation from "../../translations/useTranslation";
 import { ComponentContext } from "../../context/ComponentContext";
 
-const Homepage = () => {
+export default function HomePage() {
   const { locale, t } = useTranslation();
   const { state } = useContext(ComponentContext);
   const theme = state.theme;
+
   return (
-    // <Layout title="Home">
-    <Layout title={t("pageHome_title")} description={t("pageHome_description")}>
-      <div className="cover">
-        <div className="hello">
-          <img src="/SunMan.jpg" className="logo" alt="Logo" />
-          <h1>{t("pageHome_Welcome")}👋</h1>
-          {/* <h3>{t("pageHome_aboutPage")}</h3> */}
-          <Link href="/[lang]/about" as={`/${locale}/about`}>
-            <a className="view-more">{t("pageHome_buttonAboutMe")}</a>
-          </Link>
+    // <AppFrame classes={{ drawer: className.drawer }}>
+    <Layout>
+      <Head>
+        <title>{t("header-titleSite")}</title>
+        {/* <title>Ra-test</title> */}
+      </Head>
+      {/* Домашня стор/ hero-???*/}
+      {/* <section className="hero"> */}
+      {/* слайдер *** owl-carousel=text-align: center; */}
+      <section className="home-slider">
+        {/* елемент слайдеру */}
+        <div className="slider-item image1">
+          {/* overlay/перекривати-Робить тінь */}
+          <div className="overlay"></div>
+          <div className="slider-text">
+            <h1>Ми пропонуємо свіжі овочі та фрукти</h1>
+            <h2 className="subheading">
+              Ми постачаємо органічні овочі та фрукти
+            </h2>
+            <p>
+              <a href="#" class="btn btn-primary">
+                Докладніше
+              </a>
+            </p>
+          </div>
         </div>
-      </div>
-
+        {/* елемент слайдеру */}
+        <div className="slider-item image2">
+          {/* overlay/перекривати-Робить тінь */}
+          <div className="overlay"></div>
+          <div className="slider-text">
+            {/* <h1>100% Fresh &amp; Organic Foods</h1> */}
+            <h1>100% свіжа та органічна їжа</h1>
+            <h2 className="subheading">
+              Ми постачаємо органічні овочі та фрукти
+            </h2>
+            <p>
+              <a href="#" class="btn btn-primary">
+                Докладніше
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
       <style jsx>{`
-        .cover {
+        .home-slider {
           position: relative;
-          min-height: 600px;
-          // background: transparent url(/cover.jpg) no-repeat center center;
-          // background: transparent url(/sunrise-over-planet-earth-in.jpg) no-repeat
-          // background: transparent url(/photo/Karpaty.jpg) no-repeat
-          //background: transparent url(/photo/karpaty-morning1.jpg) no-repeat
-          background: transparent url(/photo/Everest.jpg) no-repeat
-            //background: transparent url(/photo/karpaty-morning.jpg) no-repeat
-            // background: transparent url(/photo/bananu-alkogol.jpg) no-repeat
-            //background: transparent url(/photo/bananu-alkogol-obr.jpg) no-repeat
-            center center;
-          background-size: cover; //Масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.
-          word-wrap: break-word; //Перенос строк добавляется автоматически, чтобы слово поместилось в заданную ширину блока.
-          //transition: transform 0.4s ease-in;
-          transition: transform 0.4s;
+          height: 650px;
+          z-index: -9;
         }
-        .cover:hover {
-          transform: scale(1.1);
-          cursor: pointer; //рука
+        .image2 {
+          background: 100% transparent url(/vegefoods/images/bg_1.jpg) no-repeat;
         }
-        .hello {
-          position: absolute;
-          top: 30px;
-          left: 50px;
-          max-width: 500px;
-          // height: 300px;
-          padding: 10px;
-          // margin: 5 px;
-          background: ${theme.colors.background};
-          color: ${theme.colors.text};
-          font-family: ${theme.fontFamily.sansSerif};
-          // background: #3f3f3f;
+        .image1 {
+          background: 100% transparent url(/vegefoods/images/bg_2.jpg) no-repeat;
+          animation-delay: 5s; //Затримка анімації для 2-го слайду
         }
-        .hello h1 {
-          // margin: 0 0 10px 0;
-          line-height: 0.01;
-        }
-        .hello h3 {
-          line-height: inherit;
-          line-height: 0.01;
-        }
-        a.view-more {
-          text-transform: uppercase;
-          font-size: 16px;
-        }
-        .latest-work {
-          text-align: center;
-          // padding: 30px 0;
-          padding: 10px 0;
-          // margin-bottom: 60px;
-          margin-bottom: 20px;
-        }
-        .logo {
-          display: block; //Блок стремится расшириться на всю доступную ширину. Можно указать ширину и высоту явно
-          //display: flex; //Блок стремится расшириться на всю доступную ширину. Можно указать ширину и высоту явно
-          //margin-left: 30px; //відступи зправа
-          //max-width: 350px;
-          top: 10px; //відступ
+        .slider-item {
+          position: absolute; //Щоб не бачити цей <div> !!! Інакше 1-й слайд буде відкириватись за 1-м
+          //0,0,0,0-розтягує position: absolute; на весь батьківський блок не залежно від контенту
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          align-items:center;
+          justify-content:center;
+          height: 650px; //ш
+          background-size: cover; //ш-Маштабує зображення.
+          background-repeat: no-repeat; //-ш
+          background-position: center center; //ш
+          //z-index: 0;
+          //
+          animation-name: coverSlide; //ім'я секції анімації
+          //animation-fill-mode: forwards; //rЗалишається в кінцевому стані*/
+          animation-timing-function: linear; //рівномірна зміна
+          animation-iteration-count: infinite; //к-сть повторів/rinfinite нескінченно
+          animation-duration: 5s; //протяжність анімації
+          animation-direction: alternate; //Анімація змінює напрямок в кожному циклі
         }
 
-        @media (max-width: 480px) {
-          .hello {
-            left: 30px;
-            right: 30px;
-            font-size: 18px;
-            padding: 10px;
-            /*word-wrap: break-word;  Перенос слів */
+        @keyframes coverSlide {
+          0% {
+            opacity: 1;
           }
-          h1 {
-            font-size: 28px;
-            word-wrap: break-word; /* Перенос слів */
+          45% {
+            opacity: 1;
           }
+          55% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 0;
+          }
+        from {
+            transform: scale(1.05);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+
+
+        .overlay {
+          position: absolute;
+          //0,0,0,0-розтягує на весь батьківський блок не залежно від контенту
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: black;
+          opacity: 0.2;
+        }
+
+        .slider-text {
+          //position: absolute;//З аbsolute не працює центрування
+          display: flex;
+          align-items: center; //Y-вертикально
+          justify-content: center; //X-горизонтально
+          flex-direction: column; //в стовбець
+          text-align: center;
+          //
+          height: 650px;//Треба
+        }
+
+        .subheading {
+          color: black;
+          font-weight: 300;
+          font-size: 12px;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          display: inline-block;
+          color: white;
+        }
+        .slider-text h1 {
+          font-size: 8vw;
+          color: white;
+          line-height: 1.3;
+          font-weight: 100;
+          font-family: ${theme.fontFamily.mimicHand};
+          //font-family: ${theme.fontFamily.notoSans};//!!! не працює/Локальний шрифт
+          /*font-family: Noto Sans;//Працює!!! Загрузка локального шрифта через <style jsx global> Loyout.js*/
+          //@include media-breakpoint-down(sm) {font-size: 40px;color: $pri; }
+        }
+
+        .slider-text p {
+          color: rgba(0, 0, 0, 0.8);
+          font-weight: 400;
         }
       `}</style>
     </Layout>
   );
-};
-
-export default Homepage;
+}

@@ -41,7 +41,7 @@ const initialState = {
   theme: themeLith,
   themeTypeLight: true,
   // app: "ra_ui",
-  app: "mag_stan",
+  app: "mag",
 };
 
 export const ComponentContext = createContext(initialState);
