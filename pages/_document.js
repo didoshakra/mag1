@@ -30,15 +30,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap"
             rel="stylesheet"
           />
-          {/* додаємо локально шрифт !!! Не працює через theme.js а через global style працює*/}
-          <link
-            href="/fonts/noto_sans/noto-sans-sc-v11-latin-regular.woff2"
-            // as="font"
-            // crossOrigin=""
-            rel="stylesheet"
-            // rel="preload"
-          />
-
           {/* Для відео */}
           <link
             href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600,600i"

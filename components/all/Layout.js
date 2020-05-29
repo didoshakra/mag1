@@ -22,7 +22,7 @@ const Layout = ({ children, title, description }) => {
 
   //Динамічний import //https://web.dev/code-splitting-with-dynamic-imports-in-nextjs/
   const Header = dynamic(import(`../${app}/Header`)); //Динамічний import
-  const Footer = dynamic(import(`../${app}/Footer`)); //Динамічний import
+  // const Footer = dynamic(import(`../${app}/Footer`)); //Динамічний import
 
   return (
     <div className="site-wrapper">
@@ -44,7 +44,7 @@ const Layout = ({ children, title, description }) => {
         {/* <FontAwecomIcons /> */}
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
       <style jsx global>{`
         //Загрузка локального шрифта. Нетреба в _documrnts.js
         /*@font-face {

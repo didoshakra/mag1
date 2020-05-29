@@ -9,7 +9,7 @@ import { ComponentContext } from "../../context/ComponentContext";
 import Servises from "../../components/mag/homePage/Services";
 import Сategory from "../../components/mag/homePage/Сategory";
 import Products from "../../components/mag/homePage/Products";
-// import Сategory from "./category";
+import BestPrice from "../../components/mag/homePage/BestPrice";
 
 const HomePage = () => {
   // export default function HomePage() {
@@ -23,7 +23,7 @@ const HomePage = () => {
     <Layout>
       <Head>
         {/* <title>{t("header-titleSite")}</title> */}
-        <title>mag1</title>
+        <title>Vegefoods</title>
       </Head>
       <section className="home-slider-section">
         {/* елемент слайдеру */}
@@ -77,6 +77,8 @@ const HomePage = () => {
       <Сategory />
       {/*--Products  */}
       <Products />
+      {/* BestPrice  */}
+      <BestPrice />
       <style jsx>{`
       .home-slider-section {
           position: relative;
