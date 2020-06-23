@@ -2,12 +2,11 @@
 //Добавлено animat
 import IconHeart from "../../../components/ui/icons/IconHeart";
 import IconMapMarker from "../../../components/ui/icons/IconMapMarker";
-import IconPhone from "../../../components/ui/icons/iconPhone";
+import IconPhone from "../../../components/ui/icons/IconPhone";
 import IconMail from "../../../components/ui/icons/IconMail";
 import IcontTwitter from "../../../components/ui/icons/IcontTwitter";
 import IconFacebook from "../../../components/ui/icons/IconFacebook";
 import IconInstagram from "../../../components/ui/icons/IconInstagram";
-// import IconArrowUp from "../../../components/ui/icons/IconArrowUp";
 import IconShevronUp from "../../../components/ui/icons/IconShevronUp";
 
 const Footer = () => {
