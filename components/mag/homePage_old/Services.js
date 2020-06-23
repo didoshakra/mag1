@@ -1,4 +1,4 @@
-//Services.js
+//Services.js / Muiv4.5.1
 //Добавлено animat
 import React, { useContext } from "react";
 // import useTranslation from "../../../translations/useTranslation";
@@ -11,8 +11,13 @@ import IconSupport from "../../ui/icons/IconSupport";
 import IconSuperiorQuality from "../../ui/icons/IconSuperiorQuality";
 
 const Services = () => {
+  // export default function HomePage() {
+  // const { t } = useTranslation();
+  // const { state } = useContext(ComponentContext);
+  // const theme = state.theme;
+
   return (
-    <section className="servises-section">
+    <section className="servises__section">
       {/* Елемент з іконкою */}
       <div className="servises__item">
         <div className="servises__item__icon bg-color-1">
@@ -81,9 +86,9 @@ const Services = () => {
       </div>
 
       <style jsx>{`
-        .servises-section {
-          padding: 6rem 2vw; //rem-шрифт кореневого
-          position: relative;
+        .servises__section {
+          padding: 90px 2vw;
+          //position: relative;
           display: flex;
           flex-direction: row; //В рядок
           flex-wrap: wrap;
@@ -161,7 +166,7 @@ const Services = () => {
         //@media (min-width: 768px) {
         @media (min-width: 600px) {
           //планшети
-          .servises-section {
+          .servises__section {
             padding: 90px 5vw;
           }
           .servises__item {

@@ -27,7 +27,7 @@ const BestPrice = () => {
   });
 
   return (
-    <section className="best-price-section">
+    <section className="best-price__section">
       <div className="best-price__context">
         <span className="best-price__subheading">Best Price For You</span>
         <h2 className="best-price__dial">Deal of the day</h2>
@@ -61,9 +61,9 @@ const BestPrice = () => {
         </div>
       </div>
       <style jsx>{`
-        .best-price-section {
-          padding: 6rem 2vw; //rem-шрифт кореневого
-          position: relative;
+        .best-price__section {
+          padding: 90px 2vw;
+          //position: relative;
           display: flex;
           justify-content: flex-end;
           height: 650px;
@@ -105,6 +105,7 @@ const BestPrice = () => {
           font-size: 15px;
           line-height: 1.8;
           font-weight: 400;
+
           color: gray;
         }
         .best-price__context h3 {
@@ -156,8 +157,8 @@ const BestPrice = () => {
         @media (min-width: 768px) {
           //h2
           .best-price__dial {
-            //margin-bottom: 1.5rem;
-            //position: relative;
+            margin-bottom: 1.5rem;
+            position: relative;
             font-size: 40px;
           }
           .best-price__context {
