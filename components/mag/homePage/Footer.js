@@ -1,4 +1,4 @@
-//Footer.js
+//Footer.js ff
 //Добавлено animat
 import IconHeart from "../../../components/ui/icons/IconHeart";
 import IconMapMarker from "../../../components/ui/icons/IconMapMarker";
