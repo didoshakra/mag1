@@ -81,6 +81,19 @@ const Products = () => {
 
   return (
     <section className="products-section">
+      <div className="products-header-row">
+        <div className="products-header-column">
+          {/* <div className="col-md-7 heading-section ftco-animate text-center"> */}
+          <span className="products-header-column__subheading">
+            Featured Products
+          </span>
+          <h2 className="mb-4">Our Products</h2>
+          <p>
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia
+          </p>
+        </div>
+      </div>
       <div className="products-gallery">
         {/* {products.map((item, index) => { */}
         {products.map((item) => {
@@ -162,6 +175,59 @@ const Products = () => {
           position: relative;
           //border: 2px solid #82ae46;
         }
+        .products-header-row {
+          margin-bottom: 3rem; //mb-5
+          padding: 0 5vw 1rem; //Відступи всередині контейнера row
+          display: flex; //row
+          flex-wrap: wrap; //row
+          justify-content: center; //justify-content-center
+          align-items: center;
+          //border: 1px solid rgba(63, 93, 35, 1);
+        }
+
+        .products-header-column {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          //border: 1px solid #82ae46;
+        }
+
+        .products-header-column__subheading {
+          font-size: 18px;
+          display: block;
+          margin-bottom: 10px;
+          font-family: "Lora", Georgia, serif;
+          font-style: italic;
+          color: #82ae46;
+          font-weight: 500;
+        }
+
+        .products-header-column h2 {
+          margin-bottom: 1.5rem;
+          position: relative;
+          font-size: 28px;
+          font-weight: 600;
+          color: #000000;
+        }
+        .products-header-column p {
+          margin-top: 0;
+          margin-bottom: 1rem;
+          color: gray;
+        }
+
+        @media (min-width: 768px) {
+          //h2
+          .products-header-row {
+            padding: 0 15vw 1rem; //Відступи всередині контейнера row
+          }
+          .products-header-column h2 {
+            font-size: 40px;
+          }
+        }
+        //
         .products-gallery {
           display: flex;
           flex: 0 1 auto;

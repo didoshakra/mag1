@@ -36,8 +36,8 @@ const HeaderLogo = () => {
           font-weight: 800;
           font-family: ${theme.fontFamily.sansSerif};
           text-decoration: none;
-          color: ${theme.colors.headText};
-          background: ${theme.colors.headBackground};
+          color: ${theme.colors.headMobileIcon};
+          background: ${theme.colors.headMobileBackground};
         }
         .headerLogo__icon {
           //margin-left: 10px; //Відступ від кожного елемента зліва
@@ -64,11 +64,10 @@ const HeaderLogo = () => {
           height: 35px;
         }
 
-        @media (max-width: 960px) {
+        @media (min-width: 960px) {
           .headerLogo__text {
-            //display: none;
-            color: ${theme.colors.headMobileIcon};
-            background: ${theme.colors.headMobileBackground};
+            color: ${theme.colors.headText};
+            background: ${theme.colors.headBackground};
           }
         }
       `}</style>

@@ -51,10 +51,8 @@ const Testimony = () => {
   return (
     <section className="testimony-section">
       {/* <div className="container"> */}
-      {/* <div className="row justify-content-center mb-5 pb-3"> */}
-      <div className="testimony-header-row">
+      <div className="testimony-header-conteiner">
         <div className="testimony-header-column">
-          {/* <div className="col-md-7 heading-section ftco-animate text-center"> */}
           <span className="testimony-header-column__subheading">Testimony</span>
           <h2 className="mb-4">Our satisfied customer says</h2>
           <p>
@@ -64,30 +62,21 @@ const Testimony = () => {
           </p>
         </div>
       </div>
-      <div className="testimony-carousel-row">
+      <div className="testimony-carousel-conteiner">
         <CarouselRa
           ListSlides={listSlides}
           Height="350px"
-          VisibleElements="3  "
+          VisibleElements="3"
           Dots={true}
           DotsMobi={true}
         />
       </div>
       <style jsx>{`
         .testimony-section {
-          //padding: 90px 2vw;
-          padding: 6rem 2vw; //rem-шрифт кореневого
+          padding: 5rem 2vw; //rem-шрифт кореневого
           position: relative;
-          display: flex;
-          flex-direction: row; //В рядок
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center; //Y-вертикально //R-щоб рівняло по верху
-          //
-          //border: 1px solid #2b11bd;
-          //height: 650px;
         }
-        .testimony-header-row {
+        .testimony-header-conteiner {
           margin-bottom: 3rem; //mb-5
           padding: 0 5vw 1rem; //Відступи всередині контейнера row
           display: flex; //row
@@ -129,24 +118,19 @@ const Testimony = () => {
           margin-bottom: 1rem;
           color: gray;
         }
+        .testimony-carousel-conteiner {
+          display: block;
+          width: 100%;
+          //border: 1px solid rgba(157, 25, 107, 1);
+        }
 
         @media (min-width: 768px) {
-          //h2
-          .testimony-header-row {
-            padding: 0 25vw 1rem; //Відступи всередині контейнера row
+          .testimony-header-conteiner {
+            padding: 0 15vw 1rem; //Відступи всередині контейнера row
           }
           .testimony-header-column h2 {
             font-size: 40px;
           }
-        }
-        .testimony-carousel-row {
-          // margin-bottom: 3rem; //mb-5
-          padding: 0 0 1rem; //Відступи всередині контейнера row
-          display: flex; //row
-          flex-wrap: wrap; //row
-          justify-content: center; //justify-content-center
-          align-items: center;
-          //border: 1px solid rgba(157, 25, 107, 1);
         }
       `}</style>
     </section>

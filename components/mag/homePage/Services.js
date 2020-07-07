@@ -82,7 +82,7 @@ const Services = () => {
 
       <style jsx>{`
         .servises-section {
-          padding: 6rem 2vw; //rem-шрифт кореневого
+          padding: 5rem 2vw; //rem-шрифт кореневого
           position: relative;
           display: flex;
           flex-direction: row; //В рядок
@@ -158,19 +158,17 @@ const Services = () => {
           color: #000000;
         }
 
-        //@media (min-width: 768px) {
         @media (min-width: 600px) {
           //планшети
-          .servises-section {
-            padding: 90px 5vw;
-          }
+          /*.servises-section {
+            padding: 5rem 2vw; //rem-шрифт кореневого
+          }*/
           .servises__item {
             width: calc((100%) / 2);
             margin: 0 0 24px;
             padding: 0 0;
           }
         }
-        //@media (min-width: 992px) {
         @media (min-width: 960px) {
           //нетбуки деякі планшети i >
           .servises__item {

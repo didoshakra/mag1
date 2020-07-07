@@ -62,7 +62,7 @@ const BestPrice = () => {
       </div>
       <style jsx>{`
         .best-price-section {
-          padding: 6rem 2vw; //rem-шрифт кореневого
+          padding: 5rem 2vw; //rem-шрифт кореневого
           position: relative;
           display: flex;
           justify-content: flex-end;

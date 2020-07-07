@@ -55,10 +55,7 @@ const LocaleSwitcherIcon = () => {
       {/* <div className="localeSwitcherIcon"> */}
       {/* іконка */}
       <a className="localeSwitcherIcon__icon" onClick={langMenuOpenToggle}>
-        <FontAwesomeIcon
-          icon={faGlobe}
-          title={t("headerMenu_iconTitleLanguage")}
-        />
+        <FontAwesomeIcon icon={faGlobe} title={t("localeSwitcher_title")} />
       </a>
       {/* Випадаюче меню */}
       <LocaleSwitcherDroop

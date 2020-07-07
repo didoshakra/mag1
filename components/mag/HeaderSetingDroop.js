@@ -113,43 +113,40 @@ const HeaderSetingDroop = () => {
           onClick={themeMenuToggle}
         >
           <FontAwesomeIcon icon={themeTypeLight ? faSun : faMoon} />
-          <a className="headerSetingDroop__dropdown__item__a">Теми</a>
+          {/* <a className="headerSetingDroop__dropdown__item__a">Теми</a> */}
+          <a>Теми</a>
         </li>
         <li
           className="headerSetingDroop__dropdown__item"
           onClick={langMenuOpenToggle}
         >
-          {/* Від цього об'єкту відразовуються відступи в випадаючих меню */}
+          {/* // Від цього об'єкту відразовуються відступи в випадаючих меню  */}
           <LocaleSwitcherDroop
             langMenuOpen={langMenuOpen}
             setLangMenuOpen={setLangMenuOpen}
           />
           <FontAwesomeIcon icon={faGlobe} />
-          <a className="headerSetingDroop__dropdown__item__a">Мови</a>
+          {/* <a className="headerSetingDroop__dropdown__item__a">Мови</a> */}
+          <a>Мови</a>
         </li>
       </ul>
       <style jsx>{`
         .headerSetingDroop {
           position: relative;
-          //display: inline-block;
           margin: 0;
           padding: 0;
         }
         .headerSetingDroop__icon {
           margin: 0;
-          margin-right: 5px; //Відступ від кожного елемента зліва
+          margin-right: 5px;
           display: flex;
-          align-items: center; /* Вирівнювання елементів по перетину осі(y) центр */
-          justify-content: center; /* Вирівнювання елементів по головній осі(x) вправо */
+          align-items: center;
+          justify-content: center;
           color: ${theme.colors.headMobileIcon};
           background: ${theme.colors.headMobileBackground};
-          //border: 2px solid ${theme.colors.headIcon}; /* Параметры границы */
-          border: ${theme.colors.headIconBorderWidht} ${
-        theme.colors.headIconBorderStyle
-      } ${
-        theme.colors.headIcon
-      }; /* Параметры границы *///border-radius: 45px; /* Радіус*/
-          border-radius: 36px; /* Радіус*/
+          border: ${theme.colors.headIconBorderWidht}
+            ${theme.colors.headIconBorderStyle} ${theme.colors.headIcon};
+          border-radius: 36px;
           width: 36px;
           height: 36px;
         }
@@ -159,23 +156,21 @@ const HeaderSetingDroop = () => {
           cursor: pointer;
         }
         .headerSetingDroop__dropdown {
-          //плавно проявляється (opacity 0.5s)
           position: absolute;
-          display: block; //+float: leftБлок по ширині контенту
-          float: left; //+display: blockБлок по ширині контентуleft:-110px;//працює лівий край від  лівого краю об'єкту
+          display: block;
+          float: left;
           padding: 0;
           margin: 0;
           width: 150px;
-          top: 50px; //+Працює
+          top: 50px;
           //bottom: -20px;
-          left: -110px; //+Працює
-          //min-width: 100px;
-          //overflow: auto; //якщо не поміщається
+          left: -110px;
           border-radius: 3px;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          opacity: 1;
           opacity: ${setingMenuOpen ? "1" : "0"};
-          // z-index: ${setingMenuOpen ? "-1" : "-2"};
-          z-index: -1;
+          z-index: ${setingMenuOpen ? "2" : "-2"};
+          z-index: 2;
           transition: z-index 0.5s, opacity 0.5s linear;
           background: ${theme.colors.headMenuBackground};
         }
@@ -185,13 +180,12 @@ const HeaderSetingDroop = () => {
           display: flex;
           //position: relative;
           margin: 0;
-          padding: 0; //Щоб зробити заокруглення
           padding: 5px 10px; //Щоб зробити заокруглення
-          font-size: 18px; //Рукавичка
-          font-weight: 100; //грубина
+          font-size: 18px;
+          font-weight: 100;
           font-family: ${theme.fontFamily.serif};
-          list-style-type: none; /**Отменяет маркеры для списка. */
-          align-items: center; //Y Вирівнювання
+          list-style-type: none;
+          align-items: center;
           text-decoration: none;
           color: ${theme.colors.headMobileText};
           background: ${theme.colors.headMobileBackground};
@@ -201,17 +195,26 @@ const HeaderSetingDroop = () => {
           background: ${theme.colors.headMobileTextBackgroundHover};
           cursor: pointer;
         }
-        .headerSetingDroop__dropdown__item__a {
+        .headerSetingDroop__dropdown__item:hover {
+          color: ${theme.colors.headMobileTextHover};
+          background: ${theme.colors.headMobileTextBackgroundHover};
+          cursor: pointer;
+        }
+        //При наведенні на headerSetingDroop__dropdown__item мфняється <a>
+        .headerSetingDroop__dropdown__item:hover a {
+          color: ${theme.colors.headMobileTextHover};
+          background: ${theme.colors.headMobileTextBackgroundHover};
+          cursor: pointer;
+        }
+
+        //.headerSetingDroop__dropdown__item__a {
+        .headerSetingDroop__dropdown__item a {
           margin-left: 10px;
           padding: 0;
           align-items: center; //Y Вирівнювання
+          color: ${theme.colors.headMobileText};
+          background: ${theme.colors.headMobileBackground};
         }
-        /*@media (max-width: 960px) {
-          .headerSetingDroop__icon {
-            color: ${theme.colors.headMobileleIcon};
-            background: ${theme.colors.headMobileBackground};
-          }
-        }*/
       `}</style>
     </div>
   );

@@ -9,7 +9,6 @@ import useTranslation from "../../translations/useTranslation";
 
 const LocaleSwitcherDroop = (props) => {
   const router = useRouter();
-  const { t } = useTranslation();
   const { state } = useContext(ComponentContext);
   const { theme, locale } = state;
   // console.log("LocaleSwitcherDroop/props.langMenuOpen=", props.langMenuOpen);
@@ -29,24 +28,6 @@ const LocaleSwitcherDroop = (props) => {
     },
     [router]
   );
-
-  // const localesList = [
-  //   {
-  //     loc: "uk",
-  //     name: "Українська",
-  //     flag: "/flags/flag_ukraine-20.jpg",
-  //   },
-  //   {
-  //     loc: "en",
-  //     name: "English",
-  //     flag: "/flags/flag_usa-20.jpg",
-  //   },
-  //   {
-  //     loc: "pl",
-  //     name: "Polski",
-  //     flag: "/flags/flag_poland-20.jpg",
-  //   },
-  // ];
 
   const renderMenu = () => {
     return localesList.map((item, index) => {

@@ -1,67 +1,73 @@
-//HomePage.js / Muiv4.5.1
+//HomeSlaider.js / Muiv4.5.1
 //Добавлено animat
 import React, { useContext } from "react";
-import Head from "next/head";
-import Layout from "../../components/all/Layout";
-import useTranslation from "../../translations/useTranslation";
-import { ComponentContext } from "../../context/ComponentContext";
-import HomeSlaider from "../../components/mag/homePage/HomeSlaider";
-import Servises from "../../components/mag/homePage/Services";
-import Сategory from "../../components/mag/homePage/Сategory";
-import Products from "../../components/mag/homePage/Products";
-import BestPrice from "../../components/mag/homePage/BestPrice";
-import Testimony from "../../components/mag/homePage/Testimony";
-import Partner from "../../components/mag/homePage/Partner";
-import Newsletter from "../../components/mag/homePage/Newsletter";
-import Footer from "../../components/mag/homePage/Footer";
+import Link from "next/link";
+import useTranslation from "../../../translations/useTranslation";
+import { ComponentContext } from "../../../context/ComponentContext";
 
-const HomePage = () => {
-  // export default function HomePage() {
+const HomeSlaider = () => {
   const disabled = false; //Для buton
   const { locale, t } = useTranslation();
   const { state } = useContext(ComponentContext);
   const theme = state.theme;
 
   return (
-    // <AppFrame classes={{ drawer: className.drawer }}>
-    <Layout>
-      <Head>
-        {/* <title>{t("header-titleSite")}</title> */}
-        <title>Vegefoods</title>
-      </Head>
-      {/*--HomeSlaider */}
-      <HomeSlaider />
-      {/*--Servises */}
-      <Servises />
-      {/*--Сategory */}
-      <Сategory />
-      {/*--Products  */}
-      <Products />
-      {/* BestPrice  */}
-      <BestPrice />
-      {/*--Testimony */}
-      <Testimony />
-      {/*--Partner   */}
-      <Partner />
-      {/*--Newsletter*/}
-      <Newsletter />
-      {/*--Footer    */}
-      <Footer />
+    <section className="home-slider-section">
+      {/* елемент слайдеру */}
+      <div className="slider-item image1">
+        {/* overlay/перекривати-Робить тінь */}
+        <div className="overlay"></div>
+        <div className="slider-text">
+          {/* <h1>Ми пропонуємо свіжі овочі та фрукти</h1> */}
+          <h1>{t("pageHomeSlider__sliderText_h1")}</h1>
+          <h2 className="subheading">
+            {t("pageHomeSlider__sliderText_h2")}
+            {/* Ми постачаємо органічні овочі та фрукти */}
+          </h2>
+          <Link
+            //ніби посилання на Докладніше
+            href={`/[lang]/examples/flexbox`}
+            as={`/${locale}/examples/flexbox`}
+          >
+            <a
+              className="button"
+              // onClick={buttonClick1}
+            >
+              {t("pageHomeSlider__sliderText_button")}
+              {/* Докладніше/flexbox */}
+            </a>
+          </Link>
+        </div>
+      </div>
+      {/* елемент слайдеру */}
+      <div className="slider-item image2">
+        {/* overlay/перекривати-Робить тінь */}
+        <div className="overlay"></div>
+        <div className="slider-text">
+          <h1>{t("pageHomeSlider__sliderText2_h1")}</h1>
+          {/* <h1>100% свіжа та органічна їжа</h1> */}
+          <h2 className="subheading">
+            {t("pageHomeSlider__sliderText_h2")}
+            {/* Ми постачаємо органічні овочі та фрукти */}
+          </h2>
+          {/* <a href="#" className="button" onClick={buttonClick2}> */}
+          <a
+            href={`/[lang]/examples/grid`}
+            as={`/${locale}/examples/grid`}
+            className="button"
+            // onClick={buttonClick2}
+          >
+            Докладніше/grid
+          </a>
+          <div></div>
+        </div>
+      </div>
       <style jsx>{`
       .home-slider-section {
           position: relative;
           height: 650px;
         }
-        .slider-text h1 {
-          font-size: 40px;
-          color: white;
-        }
-        @media (min-width: 960px) {
-          .slider-text h1 {
-            font-size: 8vw;
-          color: white;
-          }
-        }
+
         .image2 {
           background: 100% transparent url(/vegefoods/images/bg_1.jpg) no-repeat;
           z-index: 10;
@@ -72,7 +78,7 @@ const HomePage = () => {
           z-index: 10;
         }
         .slider-item {
-          position: absolute; //Щоб не бачити цей <div> !!! Інакше 1-й слайд буде відкириватись за 1-м
+          position: absolute; //Щоб не бачити цей <section> !!! Інакше 1-й слайд буде відкириватись за 1-м
           //position: relative; //1-й слайд буде відкириватись за 1-м
           //0,0,0,0-розтягує position: absolute; на весь батьківський блок не залежно від контенту
           //top: 0;
@@ -91,7 +97,6 @@ const HomePage = () => {
           animation-duration: 5s; //протяжність анімації
           animation-direction: alternate; //Анімація змінює напрямок в кожному циклі
         }
-
         @keyframes coverSlide {
           0% {
             opacity: 1;
@@ -115,8 +120,6 @@ const HomePage = () => {
             z-index:0 //Для видимості button
           }
         }
-
-
         .overlay {
           position: absolute;
           //0,0,0,0-розтягує на весь батьківський блок не залежно від контенту
@@ -127,7 +130,6 @@ const HomePage = () => {
           background: black;
           opacity: 0.2;
         }
-
         .slider-text {
           //position: absolute;//З аbsolute не працює центрування
           padding: 0 15px;
@@ -139,7 +141,24 @@ const HomePage = () => {
           height: 650px;//Треба
         }
 
-        .subheading {
+
+
+        .slider-text h1 {
+          font-size: 40px;
+          color: white;
+          line-height: 1.3;
+          font-weight: 200;
+          font-family: ${theme.fontFamily.mimicHand};
+          //font-family: Noto Sans;//Працює!!! Загрузка локального шрифта через <style jsx global> Loyout.js
+        }
+
+        @media (min-width: 960px) {
+          .slider-text h1 {
+            font-size: 8vw;
+          color: white;
+          }
+        }
+         .subheading {
           color: black;
           font-weight: 300;
           font-size: 12px;
@@ -148,19 +167,6 @@ const HomePage = () => {
           display: inline-block;
           color: white;
         }
-        .slider-text h1 {
-          font-size: 40px
-          //font-size: 8vw;
-          color: white;
-          line-height: 1.3;
-          font-weight: 200;
-          font-family: ${theme.fontFamily.mimicHand};
-          //font-family: ${
-            theme.fontFamily.notoSans
-          };//!!! не працює/Локальний шрифт
-          //font-family: Noto Sans;//Працює!!! Загрузка локального шрифта через <style jsx global> Loyout.js
-        }
-
         .slider-text p {
           color: rgba(0, 0, 0, 0.8);
           font-weight: 400;
@@ -192,7 +198,7 @@ const HomePage = () => {
           // cursor: ${disabled ? "not-allowed" : "pointer"};
         }
       `}</style>
-    </Layout>
+    </section>
   );
 };
-export default HomePage;
+export default HomeSlaider;

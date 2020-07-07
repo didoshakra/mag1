@@ -26,17 +26,15 @@ const HeaderTape = () => {
 
       <style jsx>{`
         .headerTape {
-
             top: 0;
-          height: "24px";
-          //z-index: 100;
+            height: "64px";
         }
 
         .headerTape__wrapper {
-          position: relative;
           display: flex;
-          justify-content: space-around; /*по-X  рівномірно, крайні 1/2*/
-          align-items: center; /* по Y */
+          flex-direction:column;
+          align-items: flex-start;
+          justify-content: flex-start;
           background: ${theme.colors.headTapeBackground};
         }
 
@@ -46,28 +44,18 @@ const HeaderTape = () => {
           font-size: 10px;
           color: ${theme.colors.headTapeText};
           text-transform: uppercase;
-          letter-spacing: 1px;//відстань між буквами в тексті
+          letter-spacing: 1px;
         }
-        //іконка перед меню- https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
-        /*.headerTape__items__text::before {
-          //font-family: "Font Awesome 5 Brands";
-          //content: "\f3fe"; //fa-telegram-plane
-          font-family: "Font Awesome 5 Solid Style";
-          content: "\f879"; //fa-phone-alt
-          font-weight: 900;
-        }*/
 
-        @media (max-width: 600px) {
-          /*iPhone<600px*/
+        @media (min-width: 600px) {
           .headerTape {
-          /* Для того щоб плавно сховати шапку*/
-          height: "64px";
+            height: "24px";
         }
         .headerTape__wrapper {
-          display: flex;
-          flex-direction:column;
-          align-items: flex-start; /*Якщо flex-direction:column то по-X*/
-          justify-content: flex-start; /*Якщо flex-direction:column то по-Y*/
+          flex-direction:row;
+           position: relative;
+          justify-content: space-around;
+          align-items: center;
         }
       `}</style>
     </div>

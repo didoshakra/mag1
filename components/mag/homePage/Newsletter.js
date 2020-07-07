@@ -31,16 +31,13 @@ const Newsletter = () => {
 
       <style jsx>{`
         .newsletter-section {
-          //padding: 3rem 20vw; //rem-шрифт кореневого
-          padding: 3rem 0; //rem-шрифт кореневого
-          display: block;
+          padding: 5rem 2vw; //rem-шрифт кореневого
+          //display: block;//за замовчуванням
           position: relative;
           background-color: #f7f6f2;
-          //display: block// по замовчуванню (для section)
           //border: 2px solid #82ae46;
         }
         .newsletter-container {
-          padding: 0 2vw; //rem-шрифт кореневого
           display: flex;
           flex: 0 1 auto;
           flex-direction: column;
@@ -107,7 +104,7 @@ const Newsletter = () => {
 
         @media (min-width: 600px) {
           .newsletter-section {
-            padding: 6rem 2vw; //rem-шрифт кореневого
+            padding: 5rem 2vw; //rem-шрифт кореневого
           }
           .newsletter-container {
             flex-direction: row; //row-по замовчуванню

@@ -1,11 +1,11 @@
 //HomePage.js / Muiv4.5.1
 //Добавлено animat
 import React, { useContext } from "react";
+import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/all/Layout";
 import useTranslation from "../../translations/useTranslation";
 import { ComponentContext } from "../../context/ComponentContext";
-import HomeSlaider from "../../components/mag/homePage/HomeSlaider";
 import Servises from "../../components/mag/homePage/Services";
 import Сategory from "../../components/mag/homePage/Сategory";
 import Products from "../../components/mag/homePage/Products";
@@ -14,6 +14,7 @@ import Testimony from "../../components/mag/homePage/Testimony";
 import Partner from "../../components/mag/homePage/Partner";
 import Newsletter from "../../components/mag/homePage/Newsletter";
 import Footer from "../../components/mag/homePage/Footer";
+import CarouselRa from "../../components/ui/carousel/CarouselRa";
 
 const HomePage = () => {
   // export default function HomePage() {
@@ -29,8 +30,52 @@ const HomePage = () => {
         {/* <title>{t("header-titleSite")}</title> */}
         <title>Vegefoods</title>
       </Head>
-      {/*--HomeSlaider */}
-      <HomeSlaider />
+      <section className="home-slider-section">
+        {/* елемент слайдеру */}
+        <div className="slider-item image1">
+          {/* overlay/перекривати-Робить тінь */}
+          <div className="overlay"></div>
+          <div className="slider-text">
+            <h1>Ми пропонуємо свіжі овочі та фрукти</h1>
+            <h2 className="subheading">
+              Ми постачаємо органічні овочі та фрукти
+            </h2>
+            <Link
+              //ніби посилання на Докладніше
+              href={`/[lang]/examples/flexbox`}
+              as={`/${locale}/examples/flexbox`}
+            >
+              <a
+                className="button"
+                // onClick={buttonClick1}
+              >
+                Докладніше/flexbox
+              </a>
+            </Link>
+          </div>
+        </div>
+        {/* елемент слайдеру */}
+        <div className="slider-item image2">
+          {/* overlay/перекривати-Робить тінь */}
+          <div className="overlay"></div>
+          <div className="slider-text">
+            <h1>100% свіжа та органічна їжа</h1>
+            <h2 className="subheading">
+              Ми постачаємо органічні овочі та фрукти
+            </h2>
+            {/* <a href="#" className="button" onClick={buttonClick2}> */}
+            <a
+              href={`/[lang]/examples/grid`}
+              as={`/${locale}/examples/grid`}
+              className="button"
+              // onClick={buttonClick2}
+            >
+              Докладніше/grid
+            </a>
+            <div></div>
+          </div>
+        </div>
+      </section>
       {/*--Servises */}
       <Servises />
       {/*--Сategory */}
@@ -41,6 +86,8 @@ const HomePage = () => {
       <BestPrice />
       {/*--Testimony */}
       <Testimony />
+      {/* ***************************** */}
+      {/* <CarouselRa /> */}
       {/*--Partner   */}
       <Partner />
       {/*--Newsletter*/}

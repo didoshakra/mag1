@@ -43,9 +43,10 @@ const About = () => {
           // animation: radial-pulse 1s infinite;
           overflow: hidden; //щоб изображение не выходило за рамки блока при увеличении. Не працює!!!
           transition: all 0.4s linear; //Для плавної зміни розміру
-          padding: 10px;
           margin-bottom: 40px;
-          width: 50%;
+          width: auto;
+          padding: 10px 20px;
+
           text-align: justify; //вирівновання тексту по всій ширині блоку
         }
         .shops .item .imgs:hover {
@@ -64,10 +65,10 @@ const About = () => {
           font-size: 18px;
           color: #777;
         }
-        @media (max-width: 600px) {
+        @media (min-width: 600px) {
           .shops .item {
-            width: auto;
-            padding: 10px 20px;
+            width: 50%;
+            padding: 10px;
           }
         }
       `}</style>

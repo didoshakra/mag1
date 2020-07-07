@@ -37,7 +37,6 @@ const Layout = ({ children, title, description }) => {
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> */}
       </Head>
 
-      {/* <Head0 /> */}
       <HeaderTape />
       <Header />
       <div className="loyout__content-wrapper">
@@ -46,15 +45,6 @@ const Layout = ({ children, title, description }) => {
       </div>
       {/* <Footer /> */}
       <style jsx global>{`
-        //Загрузка локального шрифта. Нетреба в _documrnts.js
-        /*@font-face {
-          font-family: "Noto Sans";
-          src: url("/fonts/noto_sans/noto-sans-sc-v11-latin-regular.woff2");
-          font-weight: bold;
-          font-style: normal;
-          font-display: swap;
-        }*/
-
         //global Next.js
         *,
         *::before,

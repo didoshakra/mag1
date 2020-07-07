@@ -3,7 +3,7 @@
 
 const translations = {
   en: {
-    loyOut_title: "MS Kalush",
+    loyOut_title: "Vegefoods",
     theme_Light: "Light",
     theme_Dark: "Dark",
     theme_Other: "Other",
@@ -58,7 +58,7 @@ const translations = {
     pageShops_m6Descr: "Address:  Vinnichenko str., 2",
     pageShops_m7Title: "Shop 'Станіславський' ",
     pageShops_m7Descr: "Address: S. Banderi str., 2",
-    pageShops_onMap: "Show on Map"
+    pageShops_onMap: "Show on Map",
   },
   pl: {
     loyOut_title: "MS Kalush",
@@ -117,7 +117,7 @@ const translations = {
     pageShops_m6Descr: "Adres: ul. Winnichenko 2",
     pageShops_m7Title: "Sklep 'Станіславський' ",
     pageShops_m7Descr: "Adres: ul. S. Banderi 2",
-    pageShops_onMap: "Pokaż na mapie"
+    pageShops_onMap: "Pokaż na mapie",
   },
   uk: {
     loyOut_title: "МС Калуш", //=48 (40–65сим/з пробілами (мах–80))
@@ -176,8 +176,8 @@ const translations = {
     pageShops_m6Descr: "Адреса: вул.Винниченка,2",
     pageShops_m7Title: "Магазин 'Станіславський' ",
     pageShops_m7Descr: "Адреса: вул.С.Бандери,2",
-    pageShops_onMap: "Показати на карті"
-  }
+    pageShops_onMap: "Показати на карті",
+  },
 };
 
 export default translations;

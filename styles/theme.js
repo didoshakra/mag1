@@ -13,28 +13,19 @@ export const themesNames = {
 
 export const themeDark = {
   fontFamily: {
-    //fontTertiary: "Amatic SC, cursive", //третинний
-    sansSerif: "Poppins,Geneva, Arial, sans-serif", //звичайні шрифти без засічок
-    serif: "Lora, Georgia,Blogger Sans,Times, Times New Roman, serif", //звичайні шрифти з засічками
-    fixedWidth: "Courier New,Andale Mono, monospace", //Всі гліфи мають однакову фіксовану ширину
-    mimicHand: "Amatic SC, Comic Sans MS, Comic Sans, cursive", //шрифти, що імітують почерк
-    decorative: "Trattatello,Luminari, fantasy", //декоративні шрифти, для назв
+    sansSerif: '"Poppins-Regular",Arial,sans-serif', //звичайні шрифти без засічок
+    serif: '"Lora-Regular",Georgia, serif', //звичайні шрифти з засічками
+    mimicHand: '"AmaticSC-Regular", cursive', //шрифти, що імітують почерк
+    fixedWidth: '"MajorMonoDisplay-Regular", monospace', //Всі гліфи мають однакову фіксовану ширину
+    decorative: '"Trattatello",fantasy', //декоративні шрифти, для назв
   },
   colors: {
-    // link: "#1eaaf1",
-    // linkHover: "#0d8ecf",
-    // border: "#ddd",
-    // warning: "#fff3cd",
-    // success: "#d4edda",
-    //
-    // text: "#333",
-
     // text: "#fff", //білий
     text: "rgba(65,69,69,1)", //чорний
     // background: "rgba(65,69,69,1)", //чорний
-    background: "#000",
+    background: "rgba(65,69,69,1)",
 
-    headTapeBackground: "#000",
+    headTapeBackground: "rgba(65,69,69,1)",
     headTapeText: "#fff", //білий
     // headTextHover: "rgba(21,103,179,1)",
     headTapeTextHover: "#fff", //білий/
@@ -84,25 +75,17 @@ export const themeDark = {
 };
 
 export const themeLith = {
-  //Amatic SC,Poppins,Lora-https://fonts.googleapis.com/
   fontFamily: {
-    //notoSans: "Noto Sans", ////Локальний шрифт не працює(без засічок)
-    sansSerif: "Poppins,Geneva, Arial, sans-serif", //звичайні шрифти без засічок
-    serif: "Lora, Georgia,Blogger Sans,Times, Times New Roman, serif", //звичайні шрифти з засічками
-    fixedWidth: "Courier New,Andale Mono, monospace", //Всі гліфи мають однакову фіксовану ширину
-    mimicHand: "Amatic SC, Comic Sans MS, Comic Sans, cursive", //шрифти, що імітують почерк
-    //mimicHand: "Snell Roundhand,Brush Script MT, Brush Script Std, cursive", //шрифти, що імітують почерк
-    decorative: "Trattatello,Luminari, fantasy", //декоративні шрифти, для назв
+    sansSerif: '"Poppins-Regular",Arial,sans-serif', //звичайні шрифти без засічок
+    serif: '"Lora-Regular",Georgia, serif', //звичайні шрифти з засічками
+    mimicHand: '"AmaticSC-Regular", cursive', //шрифти, що імітують почерк
+    fixedWidth: '"MajorMonoDisplay-Regular", monospace', //Всі гліфи мають однакову фіксовану ширину
+    decorative: '"Trattatello",fantasy', //декоративні шрифти, для назв
   },
   colors: {
-    //   link: "#1eaaf1",
-    //   linkHover: "#0d8ecf",
-    //   border: "#ddd",
-    //   warning: "#fff3cd",
-    //   success: "#d4edda",
-
     text: "#060214",
-    background: "rgba(220,234,244,1)",
+    background: "#fff", //білий/
+    // background: "rgba(220,234,244,1)",
     // background: "rgb(223, 222, 222)", //Основа
 
     headTapeBackground: "#82AE46", //білий
@@ -132,12 +115,11 @@ export const themeLith = {
     // headIconHover: "rgba(21,103,179,1)",
     headIconHover: "#fff", //білий
     // headIconBackgroundHover: "#fff", //білий
-    headIconBackgroundHover: "rgba(23,25,25,1)",
+    headIconBackgroundHover: "rgba(65,69,69,1)",
     //headIconBorderWidht: "2px",
     headIconBorderWidht: "0px",
     //headIconBorderStyle: "solid",
     headIconBorderStyle: "dotted",
-
     headMenuBackground: "rgba(21,103,179,0.9)",
     headMenuBackgroundActive: "#f6d142",
     //headMenuBackgroundGorizActive: "red",

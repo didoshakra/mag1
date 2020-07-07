@@ -14,40 +14,13 @@ const HeaderMenu = (props) => {
   const { state } = useContext(ComponentContext);
   const { theme } = state;
 
-  // const menu = [
-  //   {
-  //     a: "home",
-  //     link: "/",
-  //   },
-  //   {
-  //     // a: t("headerMenu_iconTitleAboutME"),
-  //     a: "shop",
-  //     link: "/mag/shop",
-  //   },
-  //   {
-  //     // a: t("headerMenu_iconTitleAboutME"),
-  //     a: "about",
-  //     link: "/mag/about",
-  //   },
-  //   {
-  //     // a: t("headerMenu_iconTitleAboutME"),
-  //     a: "blog",
-  //     link: "/mag/blog",
-  //   },
-  //   {
-  //     // a: t("headerMenu_iconTitleAboutME"),
-  //     a: "contact",
-  //     link: "/mag/contact",
-  //   },
-  // ];
-
   const renderMenu = () => {
     return props.menu.map((item, index) => {
       return (
         <li className="headerMenu__menu__item--goriz" key={index}>
           <Link href={`/[lang]${item.link}`} as={`/${locale}${item.link}`}>
             {/* <a className="g-nav__item-a">{item.a}</a> */}
-            <a>{item.a}</a>
+            <a>11/{item.a}</a>
           </Link>
         </li>
       );
@@ -62,8 +35,10 @@ const HeaderMenu = (props) => {
 
       <style jsx global>{`
         a {
-          font-size: 18px; //Рукавичка
-          font-weight: 100; //грубина
+          //font-size: 18px; //Рукавичка
+          font-size: 12px;
+          font-weight: 400; //грубина
+          //font-family: ${theme.fontFamily.serif};
           font-family: ${theme.fontFamily.serif};
           text-decoration: none;
           color: ${theme.colors.headText};
@@ -76,17 +51,13 @@ const HeaderMenu = (props) => {
           background: ${theme.colors.headBackground};
         }
         .headerMenu__menu__item--goriz:hover {
-          border-bottom: 4px solid ${theme.colors.headMenuBackgroundGorizActive}; /* Параметры линии внизу */
+          border-bottom: 4px solid ${theme.colors.headMenuBackgroundGorizActive}; // Параметры линии внизу
         }
       `}</style>
 
       <style jsx>{`
         .headerMenu {
-          display: flex;
-          margin: 0;
-          padding: 0;
-          height: 64px;
-          align-items: center; /* Вирівнювання елементів по перетину осі(y) центр*/
+          display: none; /*не показує */
         }
         .headerMenu__menu {
           margin: 0;
@@ -95,9 +66,13 @@ const HeaderMenu = (props) => {
           justify-content: flex-end; /* Вирівнювання елементів по головній осі(x) вправо */
           align-items: center; /* Вирівнювання елементів по перетину осі(y) центр*/
         }
-        @media (max-width: 960px) {
+        @media (min-width: 960px) {
           .headerMenu {
-            display: none; /*не показує */
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 64px;
+            align-items: center; /* Вирівнювання елементів по перетину осі(y) центр*/
           }
         }
       `}</style>

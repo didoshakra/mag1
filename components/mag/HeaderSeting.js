@@ -36,28 +36,26 @@ const HeaderSeting = () => {
             display: flex;
             justify-content: space-between; /*по-X Вирівнювання вліво-вправо*/
             align-items: center; /* по Y */
-            background: ${theme.colors.headBackground};
+            background: ${theme.colors.headMobileBackground};
           }
           .headerSeting_larg {
-            display: flex;
+            display: none; /*не показує */
           }
           /* --- Mobile navigation icon -- */
           .headerSeting__mobile {
-            display: none;
+            display: flex;
+
             //z-index: 19;
           }
-          @media (max-width: 960px) {
-            /*iPad<960px*/
+          @media (min-width: 960px) {
             .headerSeting_larg {
-              display: none; /*не показує */
-            }
-            .headerSeting__mobile {
               display: flex;
             }
+            .headerSeting__mobile {
+              display: none;
+            }
             .headerSeting {
-              //display: none;
-              //color: ${theme.colors.headMobileIcon};
-              background: ${theme.colors.headMobileBackground};
+              background: ${theme.colors.headBackground};
             }
           }
         `}

@@ -79,19 +79,31 @@ const MobileMenuDroop = (props) => {
           margin: 0;
           padding: 0; //Щоб зробити заокруглення
           padding: 5px 10px; //Щоб зробити заокруглення
-          font-size: 18px; //Рукавичка
-          font-weight: 100; //грубина
-          font-family: ${theme.fontFamily.serif};
-          list-style-type: none; /**Отменяет маркеры для списка. */
           text-decoration: none;
-          color: ${theme.colors.headMobileText};
-          background: ${theme.colors.headMobileBackground};
         }
 
+        .mobileMenuDroop__dropdown__item a:hover {
+          color: ${theme.colors.headMobileTextHover};
+          background: ${theme.colors.headMobileTextBackgroundHover};
+          cursor: pointer;
+        }
         .mobileMenuDroop__dropdown__item:hover {
           color: ${theme.colors.headMobileTextHover};
           background: ${theme.colors.headMobileTextBackgroundHover};
           cursor: pointer;
+        }
+        //Щоб мінявся і <a> пр наведенні на mobileMenuDroop__dropdown__item
+        .mobileMenuDroop__dropdown__item:hover a {
+          color: ${theme.colors.headMobileTextHover};
+          background: ${theme.colors.headMobileTextBackgroundHover};
+          cursor: pointer;
+        }
+        .mobileMenuDroop__dropdown__item a {
+          font-size: 15px; //Рукавичка
+          font-weight: 100; //грубина
+          font-family: ${theme.fontFamily.serif};
+          color: ${theme.colors.headMobileText};
+          background: ${theme.colors.headMobileBackground};
         }
       `}</style>
 
@@ -103,8 +115,7 @@ const MobileMenuDroop = (props) => {
           display: ${props.mobileMenuOpen ? "block" : "none"};
           height: 100%;
           height: 200px;
-          list-style-type: none; /**Отменяет маркеры для списка. */
-          background: ${theme.colors.headMobileMenuBackground};
+          background: ${theme.colors.headMobileBackground};
           transition: display 0.4s ease-in;
         }
 

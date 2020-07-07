@@ -4,9 +4,10 @@ import { useContext, useEffect } from "react";
 
 import HeaderLogo from "./HeaderLogo";
 import { ComponentContext } from "../../context/ComponentContext";
+import useTranslation from "../../translations/useTranslation";
 import HeaderMenu from "./HeaderMenu";
 import HeaderSeting from "./HeaderSeting";
-import HeaderTape from "./HeaderTape";
+//import HeaderTape from "./HeaderTape";
 import MobileMenuIcon from "./MobileMenuIcon";
 import MobileMenuDroop from "./MobileMenuDroop";
 
@@ -16,6 +17,7 @@ var scrolUP = false;
 const Header = () => {
   const { state } = useContext(ComponentContext);
   const { theme } = state;
+  const { locale, t } = useTranslation();
   const heightHeaderTape = "24px"; //Висота header0
   const heightHeader = "64px"; //Висота header0
   const headerNone = "-96px"; //Сховати
@@ -74,38 +76,37 @@ const Header = () => {
 
   const menu = [
     {
-      a: "home",
+      a: t("headerMenu_home"),
+      //a: "home",
       link: "/",
     },
     {
-      // a: t("headerMenu_iconTitleAboutME"),
-      a: "shop",
+      a: t("headerMenu_shop"),
+      //a: "shop",
       link: "/mag/shop",
     },
     {
-      // a: t("headerMenu_iconTitleAboutME"),
-      a: "about",
+      a: t("headerMenu_about"),
+      //a: "about",
       link: "/mag/about",
     },
     {
-      // a: t("headerMenu_iconTitleAboutME"),
-      a: "blog",
+      a: t("headerMenu_blog"),
+      //a: "blog",
       link: "/mag/blog",
     },
     {
-      // a: t("headerMenu_iconTitleAboutME"),
+      //a: t("headerMenu_contact"),
       a: "contact",
       link: "/mag/contact",
     },
   ];
 
   return (
-    <div className="header">
-      {/* <div className="header_tape_wraper"> */}
-      {/* <HeaderTape /> */}
-      <div className="header__wrapper">
+    <div className="header-section">
+      <div className="header-conteiner">
         <HeaderLogo />
-        <div className="header__wrapper__menu">
+        <div className="header-conteiner__menu">
           {/* Навігація */}
           <HeaderMenu menu={menu} />
           {/* іконка мобільного меню/faList/ */}
@@ -117,60 +118,48 @@ const Header = () => {
           <HeaderSeting />
         </div>
       </div>
-      {/* </div> */}
-      {/* <div className="header_mobile-menu_wraper"> */}
       {/* Список мобильного меню */}
       <MobileMenuDroop
         menu={menu}
         mobileMenuOpen={mobileMenuOpen}
         mobileMenuToggle={mobileMenuToggle}
       />
-      {/* </div> */}
       <style jsx>{`
-        .header {
-          /* Для того щоб плавно сховати шапку*/
-          margin: 0;
-          padding: 0;
-          position: fixed;
-          top: ${headerTop};
-          height: ${heightHeader};
-          width: 100%;
-          transition: top 0.4s ease-in;
-          z-index: 100;
-          //background: ${theme.colors.headBackground};
-        }
-        /*.header_mobile-menu_wraper {
+        .header-section {
           position: relative;
-          top: 0px;
-          display: ${mobileMenuOpen ? "block" : "none"};
-          //width: 100%;
+        }
+
+        .header-conteiner {
           margin: 0;
           padding: 0;
-        }*/
-
-        .header__wrapper {
-          height: ${heightHeader};
+          position: relative;
           display: flex;
-          justify-content: space-between; /*по-X Вирівнювання вліво-вправо*/
-          align-items: center; /* по Y */
-          //background: ${theme.colors.headBackground};
-          background: ${theme.colors.headBackground};
+          justify-content: space-between;
+          align-items: center;
+          color: ${theme.colors.headIcon};
+          background: ${theme.colors.headMobileBackground};
         }
-        .header__wrapper__menu {
+        .header-conteiner__menu {
           display: flex;
-          justify-content: space-end; /*по-X Вирівнювання вправо*/
-          align-items: center; /* по Y */
+          justify-content: space-end;
+          align-items: center;
         }
 
-        @media (max-width: 960px) {
-          .header {
-            position: relative;
-            top: 0;
-            transition: top 0s ease-in;
+        @media (min-width: 960px) {
+          .header-section {
+            // Для того щоб плавно сховати шапку
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: ${headerTop};
+            height: ${heightHeader};
+            width: 100%;
+            transition: top 0.4s ease-in;
+            z-index: 100;
           }
-          .header__wrapper {
-            color: ${theme.colors.headIcon};
-            background: ${theme.colors.headMobileBackground};
+          .header-conteiner {
+            height: ${heightHeader};
+            background: ${theme.colors.headBackground};
           }
         }
       `}</style>

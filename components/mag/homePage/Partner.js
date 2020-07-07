@@ -55,14 +55,12 @@ const Partner = () => {
 
       <style jsx>{`
         .partner-section {
-          //padding: 6rem 2vw; //rem-шрифт кореневого
-          padding: 6rem 2vw; //rem-шрифт кореневого
+          padding: 5rem 2vw; //rem-шрифт кореневого
           position: relative;
           //display: block// по замовчуванню (для section)
           //border: 2px solid #82ae46;
         }
         .partner-container {
-          //padding: 0 vw;
           display: flex;
           flex-direction: column;
           flex: 0 1 auto;
@@ -73,26 +71,13 @@ const Partner = () => {
         //col-sm ftco-animate"
         .partner-item {
           position: relative;
-          //display: block;
           padding: 0 1vw;
-          //display: flex;
-          //flex-direction: column;
-          //justify-content: center;
-          //align-items: center;
-          //flex: 0 1 auto;
-          //height: 5vw;
-          //height: auto;
-
-          width: 100%;
+          //width: 100%;
           justify-content: center;
           align-items: center;
           // border: 1px solid rgba(212, 17, 17, 1);
         }
         .partner-item_a {
-          //display: flex;
-          //flex: 0 1 auto;
-          //height: 100%;
-          //height: 5vw;
           //border: 1px solid rgb(150, 17, 212);
         }
         .img-fluid {
@@ -102,7 +87,6 @@ const Partner = () => {
         }
         @media (min-width: 600px) {
           .partner-container {
-            //padding: 0 3vw;
             flex: 0 1 auto;
             flex-direction: row; //row-по замовчуванню
             justify-content: space-around; //рівномірно розподіляється між елементами

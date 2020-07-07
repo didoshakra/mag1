@@ -197,7 +197,7 @@ const Footer = () => {
       <style jsx>{`
         .footer-section {
           //display: block// по замовчуванню (для section)
-          padding: 6rem 1vw; //rem-шрифт кореневого
+          padding: 5rem 1vw; //rem-шрифт кореневого
           position: relative;
           font-size: 14px;
           color: #000000;
@@ -234,12 +234,6 @@ const Footer = () => {
           //border: 1px solid rgb(57, 57, 214);
         }
 
-        @media (min-width: 600px) {
-          .footer-context-row {
-            flex-direction: row; //row-по замовчуванню
-            justify-content: center;
-          }
-        }
         //
 
         //col-sm ftco-animate"
@@ -247,13 +241,19 @@ const Footer = () => {
           position: relative;
           width: 100%;
         }
+        list-unstyled {
+          list-style-type: none; /**Отменяет маркеры для списка. */
+        }
         @media (min-width: 600px) {
           .footer-section {
             padding: 6rem 2vw; //rem-шрифт кореневого
           }
-
           .footer-container {
             flex-direction: row; //row-по замовчуванню
+          }
+          .footer-context-row {
+            flex-direction: row; //row-по замовчуванню
+            justify-content: center;
           }
         }
 

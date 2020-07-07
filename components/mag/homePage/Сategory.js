@@ -42,8 +42,7 @@ const Сategory = () => {
       </div>
       <style jsx>{`
         .category-section {
-          padding: 20px 2vw;
-          margin: 0;
+          padding: 5rem 2vw;
           display: grid;
           grid-template-areas: "tittle" "fruits" "juices" "vegetables" "drued";
           grid-gap: 2vw;
@@ -51,8 +50,6 @@ const Сategory = () => {
         }
         @media (min-width: 600px) {
           .category-section {
-            margin: 0;
-            padding: 40px 5vw;
             display: grid;
             grid-template-areas: "fruits tittle juices" "vegetables tittle drued";
             grid-template-columns: repeat(3, 1fr);
