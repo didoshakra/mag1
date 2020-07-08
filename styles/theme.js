@@ -13,11 +13,11 @@ export const themesNames = {
 
 export const themeDark = {
   fontFamily: {
-    sansSerif: '"Poppins-Regular",Arial,sans-serif', //звичайні шрифти без засічок
-    serif: '"Lora-Regular",Georgia, serif', //звичайні шрифти з засічками
-    mimicHand: '"AmaticSC-Regular", cursive', //шрифти, що імітують почерк
-    fixedWidth: '"MajorMonoDisplay-Regular", monospace', //Всі гліфи мають однакову фіксовану ширину
-    decorative: '"Trattatello",fantasy', //декоративні шрифти, для назв
+    sansSerif: "Poppins-Regular,Arial,sans-serif", //звичайні шрифти без засічок
+    serif: "Lora-Regular,Georgia, serif", //звичайні шрифти з засічками
+    mimicHand: "AmaticSC-Regular, cursive", //шрифти, що імітують почерк
+    fixedWidth: "MajorMonoDisplay-Regular, monospace", //Всі гліфи мають однакову фіксовану ширину
+    decorative: "Trattatello,fantasy", //декоративні шрифти, для назв
   },
   colors: {
     // text: "#fff", //білий
@@ -76,11 +76,11 @@ export const themeDark = {
 
 export const themeLith = {
   fontFamily: {
-    sansSerif: '"Poppins-Regular",Arial,sans-serif', //звичайні шрифти без засічок
-    serif: '"Lora-Regular",Georgia, serif', //звичайні шрифти з засічками
-    mimicHand: '"AmaticSC-Regular", cursive', //шрифти, що імітують почерк
-    fixedWidth: '"MajorMonoDisplay-Regular", monospace', //Всі гліфи мають однакову фіксовану ширину
-    decorative: '"Trattatello",fantasy', //декоративні шрифти, для назв
+    sansSerif: "Poppins-Regular,Arial,sans-serif", //звичайні шрифти без засічок
+    serif: "Lora-Regular,Georgia, serif", //звичайні шрифти з засічками
+    mimicHand: "AmaticSC-Regular, cursive", //шрифти, що імітують почерк
+    fixedWidth: "MajorMonoDisplay-Regular, monospace", //Всі гліфи мають однакову фіксовану ширину
+    decorative: "Trattatello,fantasy", //декоративні шрифти, для назв
   },
   colors: {
     text: "#060214",

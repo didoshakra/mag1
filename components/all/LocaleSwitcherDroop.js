@@ -57,36 +57,47 @@ const LocaleSwitcherDroop = (props) => {
     <div className="localeSwitcherDroop">
       <ul className="localeSwitcherDroop__menu">{renderMenu()}</ul>
       <style jsx global>{`
-        //RA-Глобальні стилі для елементів headerMenu
         .localeSwitcherDroop__menu__item {
           margin: 0;
-          padding: 0; //Щоб зробити заокруглення
-          padding: 5px 10px; //Щоб зробити заокруглення
-          font-size: 18px; //Рукавичка
-          font-weight: 100; //грубина
+          padding: 5px 10px;
+          font-size: 18px;
+          font-weight: 100;
           font-family: ${theme.fontFamily.serif};
-          list-style-type: none; /**Отменяет маркеры для списка. */
+          list-style-type: none;
           text-decoration: none;
           color: ${theme.colors.headText};
           background: ${theme.colors.headBackground};
         }
-        .localeSwitcherDroop__menu__item:hover,
-        .localeSwitcherDroop__menu__item--active:hover {
-          color: ${theme.colors.headTextHover};
-          background: ${theme.colors.headTextBackgroundHover};
+        .localeSwitcherDroop__menu__item:hover {
+            background: ${theme.colors.headText};
           cursor: pointer;
         }
+        .localeSwitcherDroop__menu__item:hover a {
+          color: ${theme.colors.headBackground};
+            background: ${theme.colors.headText};
+          cursor: pointer;
+        }
+
         .localeSwitcherDroop__menu__item--active {
           margin: 0;
           padding: 5px 10px;
           display: block;
-          //text-decoration: none;
           font-family: ${theme.fontFamily.serif};
           font-size: 18px; //Рукавичка
           font-weight: 100; //грубина
           color: ${theme.colors.headTextHover};
           background: ${theme.colors.headMenuBackgroundActive};
         }
+        .localeSwitcherDroop__menu__item--active:hover {
+          //background: ${theme.colors.headText};
+          cursor: pointer;
+        }
+        .localeSwitcherDroop__menu__item--active:hover a {
+          color: ${theme.colors.headBackground};
+            //background: ${theme.colors.headText};
+          cursor: pointer;
+        }
+
         .localeSwitcherDroop__menu__item-a {
           margin-left: 5px;
       `}</style>
@@ -107,9 +118,7 @@ const LocaleSwitcherDroop = (props) => {
           min-width: 180px; //якщо не працює display: inline-block(переносить слова)
           //bottom: -220px; //Від нижнього краю обох об'єктів()((+)вверх,(-)вниз)
           top: -0px; //Від верхнього краю обох об'єктів((+)вниз,(-)вверх)
-          right: 0px; //Від правого краю обох об'єктів((+)вліво,(-)впрво/лівий край:(-)виходить за материнський блок (+)не виходить поки дозволяє розмір(включається перенос в стовбець не зважаючи на display: inline-block)
-          //left: -140px; //Від лівого краю обох об'єктів((+)вправо,(-)вліво/)правий край:(-)виходить за материнський блок (+)не виходить  поки дозволяє розмір(включається перенос в стовбець не зважаючи на display: inline-block)
-          //overflow: visible; //якщо не поміщається(відображається/auto-полоса прокрутки)
+          right: 0px;
           border-radius: 5px;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           opacity: ${props.langMenuOpen ? "1" : "0"};

@@ -197,11 +197,7 @@ const HeaderSetingDroop = () => {
           background: ${theme.colors.headMobileTextBackgroundHover};
           cursor: pointer;
         }
-        .headerSetingDroop__dropdown__item:hover {
-          color: ${theme.colors.headMobileTextHover};
-          background: ${theme.colors.headMobileTextBackgroundHover};
-          cursor: pointer;
-        }
+
         //При наведенні на headerSetingDroop__dropdown__item мфняється <a>
         .headerSetingDroop__dropdown__item:hover a {
           color: ${theme.colors.headMobileTextHover};
