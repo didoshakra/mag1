@@ -34,18 +34,15 @@ const HeaderSeting = () => {
             /*padding: 10px; /*Поля*/
             height: 64px;
             display: flex;
-            justify-content: space-between; /*по-X Вирівнювання вліво-вправо*/
-            align-items: center; /* по Y */
+            justify-content: space-between;
+            align-items: center;
             background: ${theme.colors.headMobileBackground};
           }
           .headerSeting_larg {
-            display: none; /*не показує */
+            display: none;
           }
-          /* --- Mobile navigation icon -- */
           .headerSeting__mobile {
             display: flex;
-
-            //z-index: 19;
           }
           @media (min-width: 960px) {
             .headerSeting_larg {

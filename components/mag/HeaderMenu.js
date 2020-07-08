@@ -20,7 +20,7 @@ const HeaderMenu = (props) => {
         <li className="headerMenu__menu__item--goriz" key={index}>
           <Link href={`/[lang]${item.link}`} as={`/${locale}${item.link}`}>
             {/* <a className="g-nav__item-a">{item.a}</a> */}
-            <a>11/{item.a}</a>
+            <a>{item.a}</a>
           </Link>
         </li>
       );
@@ -36,7 +36,7 @@ const HeaderMenu = (props) => {
       <style jsx global>{`
         a {
           //font-size: 18px; //Рукавичка
-          font-size: 12px;
+          font-size: 15px;
           font-weight: 400; //грубина
           //font-family: ${theme.fontFamily.serif};
           font-family: ${theme.fontFamily.serif};
@@ -46,7 +46,7 @@ const HeaderMenu = (props) => {
         .headerMenu__menu__item--goriz {
           margin: 0;
           padding: 0; //Щоб зробити заокруглення
-          padding: 5px 10px; //Щоб зробити заокруглення
+          padding: 5px 1vw; //Щоб зробити заокруглення
           list-style-type: none; /**Отменяет маркеры для списка. */
           background: ${theme.colors.headBackground};
         }

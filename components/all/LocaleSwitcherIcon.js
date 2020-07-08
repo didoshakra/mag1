@@ -65,24 +65,21 @@ const LocaleSwitcherIcon = () => {
       <style jsx>{`
         .localeSwitcherIcon {
           position: relative;
-          //position: absolute;
-          margin: 0;
-          padding: 0;
-          //align-items: center; /* Вирівнювання елементів по (y) */
-          list-style-type: none; /*маркери для списка. */
+          //margin: 0;
+          //padding: 0;
+          list-style-type: none; //маркери для списка.
         }
         .localeSwitcherIcon__icon {
           margin: 0;
           margin-right: 5px; //Відступ від кожного елемента зліва
           display: flex;
-          align-items: center; /* Вирівнювання елементів по перетину осі(y) центр */
-          justify-content: center; /* Вирівнювання елементів по головній осі(x) вправо */
+          align-items: center;
+          justify-content: center;
           color: ${theme.colors.headIcon};
           background: ${theme.colors.headBackground};
-          //border: 2px solid ${theme.colors.headIcon}; /* Параметры границы */
-          border: ${theme.colors.headIconBorderWidht} ${theme.colors.headIconBorderStyle} ${theme.colors.headIcon}; /* Параметры границы */
-          //border-radius: 45px; /* Радіус*/
-          border-radius: 36px; /* Радіус*/
+          //border: 2px solid ${theme.colors.headIcon};
+          border: ${theme.colors.headIconBorderWidht} ${theme.colors.headIconBorderStyle} ${theme.colors.headIcon};
+          border-radius: 36px;
           width: 36px;
           height: 36px;
         }

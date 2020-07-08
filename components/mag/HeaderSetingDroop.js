@@ -151,8 +151,10 @@ const HeaderSetingDroop = () => {
           height: 36px;
         }
         .headerSetingDroop__icon:hover {
-          color: ${theme.colors.headIconHover};
-          background: ${theme.colors.headIconBackgroundHover};
+          //color: ${theme.colors.headIconHover};
+          //background: ${theme.colors.headIconBackgroundHover};
+          color: ${theme.colors.headMobileBackground};
+          background: ${theme.colors.headMobileIcon};
           cursor: pointer;
         }
         .headerSetingDroop__dropdown {

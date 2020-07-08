@@ -88,8 +88,10 @@ export const themeLith = {
     // background: "rgba(220,234,244,1)",
     // background: "rgb(223, 222, 222)", //Основа
 
-    headTapeBackground: "#82AE46", //білий
+    headTapeBackground: "#82AE46",
     headTapeText: "#fff",
+    headLogoText: "#82AE46",
+    headLogoTextHover: "rgba(65,69,69,1)",
     // headTextHover: "rgba(21,103,179,1)",
     headTapeTextHover: "#fff", //білий/
     // headTextBackgroundHover: "#fff", //білий

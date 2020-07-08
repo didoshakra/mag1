@@ -11,8 +11,7 @@ const HeaderTape = () => {
   const { theme } = state;
 
   return (
-    // <div className="headerTape">
-    <div className="headerTape__wrapper">
+    <div className="headerTape-section">
       <span className="headerTape__items__text">
         <FontAwesomeIcon icon={faPhoneAlt} /> + 1235 2355 98
       </span>
@@ -22,25 +21,22 @@ const HeaderTape = () => {
       <span className="headerTape__items__text">
         Доставка в робочі дні & Безкоштовне повернення
       </span>
-      {/* </div> */}
 
       <style jsx>{`
-        .headerTape {
-            top: 0;
-            height: "64px";
-        }
-
-        .headerTape__wrapper {
+        .headerTape-section {
+          top: 0;
+          position: relative;
+          padding: 0 1vw;
           display: flex;
-          flex-direction:column;
+          flex-direction: column;
           align-items: flex-start;
           justify-content: flex-start;
           background: ${theme.colors.headTapeBackground};
         }
 
         .headerTape__items__text {
-          display: block;
-          padding: 5px;
+          //display: block;
+          padding: 1vw;
           font-size: 10px;
           color: ${theme.colors.headTapeText};
           text-transform: uppercase;
@@ -48,14 +44,14 @@ const HeaderTape = () => {
         }
 
         @media (min-width: 600px) {
-          .headerTape {
-            height: "24px";
-        }
-        .headerTape__wrapper {
-          flex-direction:row;
-           position: relative;
-          justify-content: space-around;
-          align-items: center;
+          .headerTape-section {
+            height: 24px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
         }
       `}</style>
     </div>

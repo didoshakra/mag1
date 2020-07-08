@@ -24,7 +24,7 @@ const ThemeSwitche = () => {
   };
 
   return (
-    <div className="themeSwitche">
+    <div className="themeSwitcher">
       {/* іконка зміни теми */}
       <a
         className="themeSwitcher__icon"
@@ -39,7 +39,7 @@ const ThemeSwitche = () => {
           margin: 0;
           padding: 0;
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           align-items: center;
           list-style-type: none;
         }

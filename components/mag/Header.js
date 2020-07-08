@@ -96,8 +96,8 @@ const Header = () => {
       link: "/mag/blog",
     },
     {
-      //a: t("headerMenu_contact"),
-      a: "contact",
+      a: t("headerMenu_contact"),
+      //a: "contact",
       link: "/mag/contact",
     },
   ];
@@ -132,6 +132,7 @@ const Header = () => {
         .header-conteiner {
           margin: 0;
           padding: 0;
+          padding: 0 1vw;
           position: relative;
           display: flex;
           justify-content: space-between;

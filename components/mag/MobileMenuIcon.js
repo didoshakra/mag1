@@ -15,7 +15,7 @@ const MobileMenuIcon = (props) => {
 
   return (
     // Навігація
-    <div className="mobileMenu__droop__icon">
+    <div className="mobileMenuIicon">
       {/* іконка мобільного меню/faList/ */}
       <i
         onClick={() =>
@@ -27,27 +27,26 @@ const MobileMenuIcon = (props) => {
       </i>
 
       <style jsx>{`
-        .mobileMenu__droop__icon {
+        .mobileMenuIicon {
           margin: 0;
           margin-right: 5px; //Відступ від кожного елемента зліва
           display: flex;
           align-items: center;
           justify-content: center;
-          color: ${theme.colors.headMobileIcon};
-          background: ${theme.colors.headMobileBackground};
-          border: ${theme.colors.headIconBorderWidht}
-            ${theme.colors.headIconBorderStyle} ${theme.colors.headIcon};
+          color: ${theme.colors.headIconHover};
+          //background: ${theme.colors.headIconBackgroundHover};
+          //border: ${theme.colors.headIconBorderWidht}${theme.colors.headIconBorderStyle} ${theme.colors.headIcon};
           border-radius: 36px;
           width: 36px;
           height: 36px;
         }
-        .mobileMenu__droop__icon:hover {
-          color: ${theme.colors.headIconHover};
-          background: ${theme.colors.headIconBackgroundHover};
+        .mobileMenuIicon:hover {
+          color: ${theme.colors.headIcon};
+          background: ${theme.colors.headIconHover};
           cursor: pointer;
         }
         @media (min-width: 960px) {
-          .mobileMenu__droop__icon {
+          .mobileMenuIicon {
             display: none;
           }
         }
