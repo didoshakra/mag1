@@ -5,10 +5,8 @@ import { useContext } from "react";
 import { ComponentContext } from "../context/ComponentContext";
 import { defaultLocale } from "./config";
 import translations from "./translations";
-// import mapTranslations from "./mapTranslations"; //Для вибору файлів мов
 
 export default function useTranslation() {
-  // const { locale } = useContext(LocaleContext);
   const { state } = useContext(ComponentContext);
   const { locale } = state;
   // console.log("000/ useTranslation.js/locale=", locale);
