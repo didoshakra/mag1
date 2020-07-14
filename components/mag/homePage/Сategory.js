@@ -1,8 +1,11 @@
 //Сategory.js
 //Добавлено animat
 import React, { useContext } from "react";
+import { ComponentContext } from "../../../context/ComponentContext";
 
 const Сategory = () => {
+  const { state } = useContext(ComponentContext);
+  const theme = state.theme;
   return (
     // {/* Щоб зробити грід  */}
     <section className="category-section">
@@ -108,14 +111,14 @@ const Сategory = () => {
 
         .category__tittle-container h2 {
           font-size: 24px;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           color: #8db557;
           margin: 0 0 8px;
         }
 
         .category__tittle-container p {
           font-size: 15px;
-          font-family: "Poppins", Arial, sans-serif;
+          font-family: ${theme.fontFamily.sansSerif};
           color: #8b8b8b;
           margin: 0 0 8px;
         }
@@ -146,7 +149,7 @@ const Сategory = () => {
           color: #fff;
           border: 2px solid #82ae46;
           border-radius: 20px;
-          font-family: "Poppins", Geneva, Arial, sans-serif;
+          font-family: ${theme.fontFamily.sansSerif};
           font-size: 16px;
           text-decoration: none;
         }

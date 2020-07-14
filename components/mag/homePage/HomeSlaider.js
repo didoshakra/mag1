@@ -149,7 +149,6 @@ const HomeSlaider = () => {
           line-height: 1.3;
           font-weight: 200;
           font-family: ${theme.fontFamily.mimicHand};
-          //font-family: Noto Sans;//Працює!!! Загрузка локального шрифта через <style jsx global> Loyout.js
         }
 
         @media (min-width: 960px) {
@@ -182,12 +181,8 @@ const HomeSlaider = () => {
           color: #fff;
           border: 2px solid #82ae46;
           border-radius: 20px;
-          //font-family: "Poppins,Geneva, Arial, sans-serif";
-          //font-family: ${theme.fontFamily.sansSerif};
+          font-family: ${theme.fontFamily.sansSerif};
            font-size: 16px;
-          //font-weight: "";
-          //opacity: 1;
-          //list-style-type: none;
           text-decoration: none;
           //z-index: 100;
         }

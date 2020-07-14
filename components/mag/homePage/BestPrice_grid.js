@@ -1,5 +1,9 @@
 //BestPrice.js
+import { ComponentContext } from "../../../context/ComponentContext";
+
 const BestPrice = () => {
+  const { state } = useContext(ComponentContext);
+  const theme = state.theme;
   return (
     <section className="best-price__section">
       <h3>BestPrice</h3>
@@ -57,8 +61,7 @@ const BestPrice = () => {
           font-size: 18px;
           display: block;
           margin-bottom: 10px;
-          //font-family: "Dosis", "Lora", Georgia, serif;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           font-style: italic;
           color: #82ae46;
         }
@@ -83,7 +86,7 @@ const BestPrice = () => {
         .best-price__context a {
           font-size: 30px;
           font-weight: 400;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           font-style: italic;
           line-height: 1.5;
           color: #82ae46;

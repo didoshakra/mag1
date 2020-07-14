@@ -1,8 +1,8 @@
 //Testimony.js
 
 import React, { useContext } from "react";
-
 import CarouselRa from "../../ui/carousel/CarouselRa";
+import { ComponentContext } from "../../../context/ComponentContext";
 
 const listSlides = [
   {
@@ -48,6 +48,8 @@ const listSlides = [
 ];
 
 const Testimony = () => {
+  const { state } = useContext(ComponentContext);
+  const theme = state.theme;
   return (
     <section className="testimony-section">
       {/* <div className="container"> */}
@@ -100,7 +102,7 @@ const Testimony = () => {
           font-size: 18px;
           display: block;
           margin-bottom: 10px;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           font-style: italic;
           color: #82ae46;
           font-weight: 500;

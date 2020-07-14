@@ -1,9 +1,13 @@
 //Products.js
+import { useContext } from "react";
 import IconMenu from "../../ui/icons/IconMenu";
 import IconCart from "../../ui/icons/IconCart";
 import IconHeart from "../../ui/icons/IconHeart";
+import { ComponentContext } from "../../../context/ComponentContext";
 
 const Products = () => {
+  const { state } = useContext(ComponentContext);
+  const theme = state.theme;
   const products = [
     {
       name: "Перець",
@@ -199,7 +203,7 @@ const Products = () => {
           font-size: 18px;
           display: block;
           margin-bottom: 10px;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           font-style: italic;
           color: #82ae46;
           font-weight: 500;

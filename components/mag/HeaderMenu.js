@@ -38,7 +38,6 @@ const HeaderMenu = (props) => {
           //font-size: 18px; //Рукавичка
           font-size: 15px;
           font-weight: 400; //грубина
-          //font-family: ${theme.fontFamily.serif};
           font-family: ${theme.fontFamily.serif};
           text-decoration: none;
           color: ${theme.colors.headText};

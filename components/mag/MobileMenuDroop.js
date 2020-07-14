@@ -7,10 +7,9 @@ import useTranslation from "../../translations/useTranslation";
 import { ComponentContext } from "../../context/ComponentContext";
 
 const MobileMenuDroop = (props) => {
-  // const { menu } = props;
   const { state } = useContext(ComponentContext);
   const theme = state.theme;
-  const { locale, t } = useTranslation();
+  const { locale } = useTranslation();
 
   //*** Для клацання поза обєктом ***/
   //Добавити в контрольований об'єкт-(ref={wrapperRef})- (<ul ref={wrapperRef}... )

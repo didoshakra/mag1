@@ -1,6 +1,12 @@
 //BestPrice.js
 
+import { useContext } from "react";
+import { ComponentContext } from "../../../context/ComponentContext";
+
 const BestPrice = () => {
+  const { state } = useContext(ComponentContext);
+  const theme = state.theme;
+
   //Таймер зворотнього виклику
   //https://www.digitalocean.com/community/tutorials/react-countdown-timer-react-hooks
   const calculateTimeLeft = () => {
@@ -84,8 +90,7 @@ const BestPrice = () => {
           font-size: 18px;
           display: block;
           margin-bottom: 10px;
-          //font-family: "Dosis", "Lora", Georgia, serif;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           font-style: italic;
           color: #82ae46;
           font-weight: 500;
@@ -96,7 +101,7 @@ const BestPrice = () => {
           position: relative;
           font-size: 28px;
           font-weight: 600;
-          font-family: "Poppins", Arial, sans-serif;
+          font-family: ${theme.fontFamily.sansSerif};
           color: #000000;
         }
         .best-price__context p {
@@ -113,7 +118,7 @@ const BestPrice = () => {
         .best-price__context a {
           font-size: 30px;
           font-weight: 500;
-          font-family: "Lora", Georgia, serif;
+          font-family: ${theme.fontFamily.serif};
           font-style: italic;
           line-height: 1.5;
           color: #82ae46;
